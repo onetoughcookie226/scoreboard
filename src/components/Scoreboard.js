@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import Player from './Player'
 import './Scoreboard.css'
+import AddPlayer from './AddPlayer'
 
 export default class Scoreboard extends PureComponent {
 //declar the name the players in n array of objects
@@ -23,15 +24,15 @@ state = {
           name: 'Milan',
           score: 4
         }
-      ]
+      ]  
     }
-
 
     updatePlayerScore = (id, score) => {
         const updatedPlayers = this.state.players.map(
           player => {
             if (player.id === id) {
               return {
+                  //unpacking
                 ...player,
                 score
               }
@@ -44,6 +45,14 @@ state = {
         this.setState({ players: updatedPlayers })
       }
 
+ 
+      //rendering the AddPlayer component
+//    renderAddPlayer=() => {
+//        return (
+//            
+//        )
+//    }   
+
   renderPlayer=(player) => {
       //rendering the player component and passing the name, score and key propertirs.
     return (
@@ -55,7 +64,20 @@ state = {
         key={player.id}
         updatePlayerScore={this.updatePlayerScore}
         />)
+       
   }
+  //Add a player to the scorebard class
+  addPlayer = (name) => {
+    const player = {
+      id: Math.round(Math.random()*100000),
+      name,
+      score: 0
+    }
+    this.setState({
+      players: this.state.players.concat(player)
+    })
+  }
+
 
   render() {
     return (
@@ -69,6 +91,9 @@ state = {
               .map(this.renderPlayer)
           }
         </ul>
+
+        {/* //pass the addPlayer function as a property for the AddPlayer component. */}
+        <AddPlayer addPlayer={this.addPlayer} />  
       </div>
     )
   }
