@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Title from './components/Title'
+import Scoreboard from './components/Scoreboard'
 
 
 class App extends Component {
@@ -13,11 +13,12 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <main>
-          <Title />
+          {/* <Title /> */}
+          <Scoreboard />
         </main>
-        <p className="App-intro">
+        {/* <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        </p> */}
       </div>
     );
   }
