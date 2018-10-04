@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Scoreboard from './components/Scoreboard'
 
@@ -9,8 +9,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          {/*<img src={logo} className="App-logo" alt="logo" />*/} 
+          <h1 className="App-title">Scoreboard</h1>
+          
         </header>
         <main>
           {/* <Title /> */}

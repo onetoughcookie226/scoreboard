@@ -82,7 +82,7 @@ state = {
   render() {
     return (
       <div className="scoreboard">
-        <h1>Scoreboard</h1>
+        <h1></h1>
         <ul>
              {/* ordering the players score with sort method */}
           {
