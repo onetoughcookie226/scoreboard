@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './Player.css'
 import PlusButton from './PlusButton'
@@ -6,7 +6,7 @@ import RestartButton from './RestartButton'
 
 
 
-export default class Player extends PureComponent {
+export default class Player extends Component {
     //defining poropTypes --look at react documentaion 
   static propTypes = {
     id: PropTypes.number.isRequired,
@@ -14,7 +14,7 @@ export default class Player extends PureComponent {
     score: PropTypes.number.isRequired,
     //adjust the Player component to require a prop type updatePlayerScore
     updatePlayerScore: PropTypes.func.isRequired,
-    // restartPlayer: PropTypes.func.isRequired
+    restartPlayer: PropTypes.func.isRequired
   }
 
     //defining the method

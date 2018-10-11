@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
-import Scoreboard from './components/Scoreboard'
+import Scoreboard from './components/Scoreboard';
+import Title from './components/Title';
+import Player from './components/Player';
+import Clock from './components/Clock'
 
 
 class App extends Component {
@@ -14,8 +16,10 @@ class App extends Component {
           
         </header>
         <main>
-          {/* <Title /> */}
+          <Title /> 
           <Scoreboard />
+          <Player />
+          {/*/ <Clock />*/}
         </main>
         {/* <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.

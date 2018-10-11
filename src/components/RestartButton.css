@@ -1,0 +1,16 @@
+button.restart-button {
+    flex: 1;
+    border: 1px solid #ccc;
+    font-size: 150%;
+    margin: 12px;
+    cursor: pointer;
+    max-width: 70px;  
+    padding: 7px 2px;
+    font-family: 'Orbitron', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1em;
+
+  }
+  
+  button.restart-button:hover {
+    background-color: #eee;
+  }
