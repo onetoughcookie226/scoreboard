@@ -1,9 +1,10 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import Player from './Player'
 import './Scoreboard.css'
 import AddPlayer from './AddPlayer'
+// import Clock from './Clock'
 
-export default class Scoreboard extends PureComponent {
+export default class Scoreboard extends Component {
 //declar the name the players in n array of objects
 
 // do i need to put this in a constructor?
@@ -45,6 +46,13 @@ state = {
         this.setState({ players: updatedPlayers })
       }
 
+    //  updatePlayerColor = (id, score) => {
+    //     const newColor = this.state.players.filter(
+    //       (player) => {
+    //         return player.score === 0
+    //       }
+    //     )
+    //   }
  
       //rendering the AddPlayer component
 //    renderAddPlayer=() => {
@@ -63,6 +71,7 @@ state = {
         //React needs to know witch thing you are updateing...if you have an input the text doesnt move around
         key={player.id}
         updatePlayerScore={this.updatePlayerScore}
+        // updatePlayerColor={this.updatePlayerColor}
         />)
        
   }
@@ -79,6 +88,13 @@ state = {
   }
 
 
+//   getHour = () => {
+//     const time = new Date
+//     console.log(this.getHour)
+
+//    return time.getHours()
+// }
+
   render() {
     return (
       <div className="scoreboard">
@@ -94,6 +110,7 @@ state = {
 
         {/* //pass the addPlayer function as a property for the AddPlayer component. */}
         <AddPlayer addPlayer={this.addPlayer} />  
+        {/*<Clock getHour={this.getHour} />*/}
       </div>
     )
   }
