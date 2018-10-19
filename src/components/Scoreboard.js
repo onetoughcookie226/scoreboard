@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Player from './Player'
 import './Scoreboard.css'
 import AddPlayer from './AddPlayer'
-// import Clock from './Clock'
+import Clock from './Clock'
 
 export default class Scoreboard extends Component {
 //declar the name the players in n array of objects
@@ -87,14 +87,6 @@ state = {
     })
   }
 
-
-//   getHour = () => {
-//     const time = new Date
-//     console.log(this.getHour)
-
-//    return time.getHours()
-// }
-
   render() {
     return (
       <div className="scoreboard">
@@ -110,7 +102,8 @@ state = {
 
         {/* //pass the addPlayer function as a property for the AddPlayer component. */}
         <AddPlayer addPlayer={this.addPlayer} />  
-        {/*<Clock getHour={this.getHour} />*/}
+        <Clock date={Date()} />
+
       </div>
     )
   }

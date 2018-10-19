@@ -19,7 +19,7 @@ class App extends Component {
           <Title /> 
           <Scoreboard />
           <Player />
-          {/*/ <Clock />*/}
+          <Clock date={Date()}/>
         </main>
         {/* <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
